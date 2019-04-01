@@ -1,0 +1,8 @@
+{
+	"online-references":[{
+		"url": "https://doc.qt.io/qt-5/cmake-manual.html",
+		"contribution": "Implementation of CMake",
+		"file": "CMakeLists.txt"
+	}
+	]
+}
