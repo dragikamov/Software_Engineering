@@ -1,0 +1,15 @@
+{
+	"colleague":[{
+		"jacobs-id": "dkamov",
+		"contribution": "Testing from previous sprint",
+		"file": "/test"
+	}
+	],
+    "online-references":[  
+      {
+         "url":"https://doc.qt.io/qt-5/qtwidgets-tutorials-addressbook-part6-example.html",
+         "contribution":"Save and Load",
+         "file":"mainwindow.cpp"
+      }
+   ],
+}
