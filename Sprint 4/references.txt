@@ -1,0 +1,28 @@
+{
+	"online-references": [{
+			"url": "https://doc.qt.io/archives/qt-4.8/signalsandslots.html",
+			"contribution": "Implementation for aButtonClicked()",
+			"file": "MainWindow.cpp"
+		},
+		{
+			"title": "https://stackoverflow.com/questions/686353/random-float-number-generation",
+			"contribution": "Implementation for UpdateRandomNumber()",
+			"file": "MainWindow.cpp"
+		}
+	],
+	"colleague": [{
+			"jacobs-id": "essojati",
+			"contribution": "Helped with PencilProducer development",
+			"file": "MainWindow.h",
+			"file2": "MainWindow.cpp",
+			"file3": "MainWindow.ui"
+		},
+		{
+			"jacobs-id": "wwang",
+			"contribution": "Helped with PencilProducer development",
+			"file": "MainWindow.h",
+			"file2": "MainWindow.cpp",
+			"file3": "MainWindow.ui"
+		}
+	]
+}
