@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>569</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Window</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #19232D;
+    border: 0px solid #32414B;
+    padding: 0px;
+    color: #F0F0F0;
+    selection-background-color: #1464A0;
+    selection-color: #F0F0F0;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>691</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QTextEdit" name="gameNameText">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>691</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:24pt; color:#e9b96e;&quot;&gt;Universal Pencil Producer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="highScoreText">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>691</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Cantarell'; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;High Scores&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="highScoreBoard">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>221</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadButton">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>430</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Load Game</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startGame">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>430</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Start the Game</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="names">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>490</y>
+        <width>691</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   background-color: #19232D;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#e9b96e;&quot;&gt;Universal Pencil Provider  &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#ffffff;&quot;&gt;Sprint 5  &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Dragi Kamov &amp;amp; Amine Ighiri&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page1">
+     <widget class="QLabel" name="title">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>341</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Universal Pencil Provider</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>440</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton::indicator {
+width: 11px;
+height: 11px;
+border-radius: 5px;
+}
+
+QRadioButton::indicator::unchecked{ 
+border: 1px solid; 
+border-color: rgb(132,132,132);
+border-radius: 5px;
+background-color: white; 
+width: 11px; 
+height: 11px; 
+}
+
+QRadioButton::indicator::checked{ 
+border: 3px solid; 
+border-color: white;
+border-radius: 6px;
+background-color: #8d2663;; 
+width: 7px; 
+height: 7px; 
+}</string>
+      </property>
+      <property name="text">
+       <string>Debugger</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="mkPen">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>160</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Make Pencil</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buyWood">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>330</y>
+        <width>121</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}
+
+QPushButton:disabled{
+    background-color: #A3B0BE;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Purchase Wood</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveStateButton">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>490</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="autoPencil2000Label">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>250</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>AutoPencil2000:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayWoodPr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>400</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>$1000 / 100m</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="inventory_2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>270</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	color: #929292;
+}</string>
+      </property>
+      <property name="text">
+       <string>Rate: 120 pencils/minute </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="plusBtn">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>220</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}
+
+QPushButton:disabled{
+    background-color: #A3B0BE;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buyGraphite">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>330</y>
+        <width>121</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}
+
+QPushButton:disabled{
+    background-color: #A3B0BE;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Purchase Graphite</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="inc_materials">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>440</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Add 10m of
+materials</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayGraphPr">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>400</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>$1000 / 100m</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayInv">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>150</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="pencilPriceLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Price of Pencil:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="graphInv">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Graphite Inventory:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayGraph">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>300</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>1000.00m</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayPencilPrice">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>190</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>$1.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="publicDemandLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Public Demand:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="closeStateButton">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>490</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>close</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="minusBtn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}
+
+QPushButton:disabled{
+    background-color: #A3B0BE;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bankLabel">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>80</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Bank Account:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="intelligence">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>360</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arimo</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayInvDate">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>80</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	color: #929292;
+}</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="inventoryLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pencils in Inventory:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayWood">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>270</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>1000.00m</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayAutoPencil200Price">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>220</y>
+        <width>181</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>$150.00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="inc_penc_inv">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>440</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Add 1k pencils
+to inventory</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayAccount">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>110</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	color: #EE8130;
+}</string>
+      </property>
+      <property name="text">
+       <string>$145.00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayAutoPencil2000">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>250</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buyMoreBtn">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>300</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Buy More</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="inc_money">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>440</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Add $1000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayPublicDemand">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>110</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="inventory">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	color: #929292;
+}</string>
+      </property>
+      <property name="text">
+       <string>Pencils Produced (to date):</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="woodInv">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Wood Inventory:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="upgradeAPM">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>160</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Upgrade Marketing</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="unlockMarketing">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>360</y>
+        <width>71</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}
+
+QPushButton:disabled{
+    background-color: #A3B0BE;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Unlock
+Marketing</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_intelligence">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>440</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Add 10
+intelligence</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_marketing">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>440</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;
+}
+
+QPushButton:hover,
+QPushButton:checked:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+
+QPushButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+}</string>
+      </property>
+      <property name="text">
+       <string>Add 3
+Marketing</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page2">
+     <widget class="QLabel" name="gameOverText">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>50</y>
+        <width>231</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Game Over!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="names_1">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>190</y>
+        <width>221</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; color:#e9b96e;&quot;&gt;Universal Pencil Provider&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Sprint 5 &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Dragi Kamov&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Amine Ighiri&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="highScoreText_1">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>150</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Cantarell'; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;High Scores&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="highScoreBoard_1">
+      <property name="geometry">
+       <rect>
+        <x>375</x>
+        <y>190</y>
+        <width>221</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="playAgain">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>460</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;</string>
+      </property>
+      <property name="text">
+       <string>Play Again</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="exitButton">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>460</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   background-color: #8d2663;	
+	border: 1px solid #32414B;
+	color: #F0F0F0;
+	font-size: 13px;
+     border-radius: 4px;
+    padding: 3px;
+    outline: none;</string>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>691</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
